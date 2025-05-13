@@ -41,7 +41,7 @@
       display: block;
       width: 80%;
       max-width: 320px;
-      margin: 1.5rem auto;
+      margin: 1.2rem auto;
       padding: 1rem;
       background-color: #ff6b3d;
       color: white;
@@ -56,17 +56,18 @@
       font-size: 0.9rem;
       color: #777;
     }
-    .images {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      align-items: center;
+    .slideshow-container {
+      max-width: 100%;
+      position: relative;
+      margin: auto;
     }
-    .images img {
+    .slideshow-container img {
       width: 100%;
-      max-width: 400px;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      height: auto;
+      display: none;
+    }
+    .slideshow-container img.active {
+      display: block;
     }
   </style>
 </head>
@@ -77,11 +78,11 @@
   </header>
 
   <section>
-    <div class="images">
-      <img src="tteokbokki.png" alt="떡볶이">
-      <img src="jjolmyeon.png" alt="쫄면">
-      <img src="menu1.png" alt="메뉴1">
-      <img src="menu2.png" alt="메뉴2">
+    <div class="slideshow-container">
+      <img src="tteokbokki.png" alt="떡볶이" class="slide active">
+      <img src="jjolmyeon.png" alt="쫄면" class="slide">
+      <img src="menu1.png" alt="메뉴1" class="slide">
+      <img src="menu2.png" alt="메뉴2" class="slide">
     </div>
 
     <h2>오늘 뭐 먹지? 고민 끝!</h2>
@@ -120,10 +121,25 @@
 
     <a href="https://www.instagram.com/hwangganegimbap/#" class="button" target="_blank">인스타그램으로 보기</a>
     <a href="https://map.naver.com/p/search/%ED%99%A9%EA%B0%80%EB%84%A4%EA%B9%80%EB%B0%A5/place/1273948672" class="button" target="_blank">네이버지도에서 보기</a>
+    <a href="https://baemin.me/s-8_1tlPh" class="button" target="_blank">배달의민족으로 주문하기</a>
+    <a href="tel:0337667388" class="button">전화 걸기: 033-766-7388</a>
+    <a href="https://pcmap.place.naver.com/restaurant/1581989146/review/ugc?entry=pll&from=map&fromNxList=true&fromPanelNum=2&locale=ko&searchText=%EC%9B%90%EC%A3%BC%20%EA%B9%80%EB%B0%A5%EB%A7%9B%EC%A7%91&svcName=map_pcv5&timestamp=202505131016&type=photoView" class="button" target="_blank">블로그 후기 보기</a>
   </section>
 
   <footer>
     © 2025 황가네 김밥. All rights reserved.
   </footer>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    setInterval(() => {
+      slides.forEach((img, i) => {
+        img.classList.remove('active');
+      });
+      slideIndex = (slideIndex + 1) % slides.length;
+      slides[slideIndex].classList.add('active');
+    }, 1000);
+  </script>
 </body>
 </html>
