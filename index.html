@@ -5,141 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>황가네 김밥</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'SUIT', 'Noto Sans KR', sans-serif;
-      background-color: #fff4ee;
-      color: #333;
-    }
-    header {
-      background-color: #ff6b3d;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    section {
-      padding: 2rem 1rem;
-      max-width: 768px;
-      margin: auto;
-    }
-    h2 {
-      color: #ff6b3d;
-      margin-top: 2rem;
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
-    .highlight {
-      font-weight: bold;
-      color: #d94432;
-    }
-    .button {
-      display: block;
-      width: 80%;
-      max-width: 320px;
-      margin: 1.2rem auto;
-      padding: 1rem;
-      background-color: #ff6b3d;
-      color: white;
-      text-align: center;
-      text-decoration: none;
-      font-size: 1.2rem;
-      border-radius: 8px;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #777;
-    }
-    .slideshow-container {
-      max-width: 100%;
-      position: relative;
-      margin: auto;
-    }
-    .slideshow-container img {
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
       width: 100%;
-      height: auto;
-      display: none;
+      height: 100%;
+      font-family: 'SUIT', 'Noto Sans KR', sans-serif;
+      color: white;
     }
-    .slideshow-container img.active {
-      display: block;
+    body {
+      background: url('6f9e8395-2e2d-496a-bb8a-37c0349a03f9.png') no-repeat center center fixed;
+      background-size: cover;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    .center-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 2rem;
+      border-radius: 12px;
+    }
+    .center-text h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .center-text p {
+      font-size: 1.2rem;
+    }
+    @media (max-width: 768px) {
+      nav a {
+        font-size: 0.9rem;
+        margin: 0 0.5rem;
+      }
+      .center-text h1 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
+  <nav>
+    <a href="#">까무리</a>
+    <a href="#">왜 까무리일까요?</a>
+    <a href="#">메뉴소개</a>
+    <a href="#">공간소개</a>
+    <a href="#">까무리 NEWS</a>
+    <a href="#">이용후기</a>
+    <a href="#">매일 찾아오는 맛집</a>
+    <a href="#">바로예약</a>
+    <a href="#">문의하기</a>
+    <a href="#">오시는길</a>
+  </nav>
+
+  <div class="center-text">
     <h1>황가네 김밥</h1>
-    <p>맛과 정성을 담은 원주 김밥 맛집</p>
-  </header>
-
-  <section>
-    <div class="slideshow-container">
-      <img src="tteokbokki.png" alt="떡볶이" class="slide active">
-      <img src="jjolmyeon.png" alt="쫄면" class="slide">
-      <img src="menu1.png" alt="메뉴1" class="slide">
-      <img src="menu2.png" alt="메뉴2" class="slide">
-    </div>
-
-    <h2>오늘 뭐 먹지? 고민 끝!</h2>
-    <p>300시간 숙성된 비법 소스로 완성된 <span class="highlight">떡볶이</span>, <span class="highlight">쫄면</span>, 그리고 신선한 재료의 <span class="highlight">김밥</span>으로 원주 명륜동 대표 맛집!</p>
-
-    <h2>황가네 김밥만의 특별함</h2>
-    <h3>프리미엄 김밥 (50가지 이상!)</h3>
-    <ul>
-      <li>횡성 한우 소불고기 김밥</li>
-      <li>키토 김밥 (저탄수 20종)</li>
-      <li>고기한쌈김밥</li>
-      <li>참치듬뿍김밥</li>
-    </ul>
-
-    <h3>최상의 분식 메뉴</h3>
-    <ul>
-      <li>산더미 쫄면</li>
-      <li>쌀가래떡 & 밀떡볶이</li>
-      <li>수제 돈까스</li>
-      <li>튀김비빔만두</li>
-    </ul>
-
-    <h3>든든한 한식도 준비되어 있어요</h3>
-    <ul>
-      <li>김치 순두부</li>
-      <li>고기 듬뿍 김치찌개</li>
-      <li>고기 듬뿍 된장찌개</li>
-    </ul>
-
-    <h2>왜 황가네 김밥일까요?</h2>
-    <ul>
-      <li>주문 즉시 조리, 항상 신선</li>
-      <li>프리미엄 재료만 사용</li>
-      <li>현지 특산물 활용 (횡성 한우 등)</li>
-    </ul>
-
-    <a href="https://www.instagram.com/hwangganegimbap/#" class="button" target="_blank">인스타그램으로 보기</a>
-    <a href="https://map.naver.com/p/search/%ED%99%A9%EA%B0%80%EB%84%A4%EA%B9%80%EB%B0%A5/place/1273948672" class="button" target="_blank">네이버지도에서 보기</a>
-    <a href="https://baemin.me/s-8_1tlPh" class="button" target="_blank">배달의민족으로 주문하기</a>
-    <a href="tel:0337667388" class="button">전화 걸기: 033-766-7388</a>
-    <a href="https://pcmap.place.naver.com/restaurant/1581989146/review/ugc?entry=pll&from=map&fromNxList=true&fromPanelNum=2&locale=ko&searchText=%EC%9B%90%EC%A3%BC%20%EA%B9%80%EB%B0%A5%EB%A7%9B%EC%A7%91&svcName=map_pcv5&timestamp=202505131016&type=photoView" class="button" target="_blank">블로그 후기 보기</a>
-  </section>
-
-  <footer>
-    © 2025 황가네 김밥. All rights reserved.
-  </footer>
-
-  <script>
-    let slideIndex = 0;
-    const slides = document.querySelectorAll('.slide');
-    setInterval(() => {
-      slides.forEach((img, i) => {
-        img.classList.remove('active');
-      });
-      slideIndex = (slideIndex + 1) % slides.length;
-      slides[slideIndex].classList.add('active');
-    }, 1000);
-  </script>
+    <p>300시간 숙성된 비법 소스와 명륜동의 맛을 담았습니다.</p>
+  </div>
 </body>
 </html>
